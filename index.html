@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atrakcyjna Aplikacja z API</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+
+    <!-- Plik CSS -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </head>
+  <body class="day-mode">
+    <!-- Menu nawigacyjne -->
+    <div id="menu-bar">
+      <a href="#home">Strona główna</a>
+      <a href="#gallery">Galeria</a>
+      <a href="#api">API</a>
+      <a href="#about">O projekcie</a>
+    </div>
+
+    <!-- Przycisk menu rozwijanego -->
+    <div id="dropdown-container">
+      <div class="dropdown">
+        <a href="#" class="dropdown-toggle">Więcej opcji</a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#gallery" id="load-dogs"
+            >Galeria psów</a
+          >
+          <a class="dropdown-item" href="#api" id="load-api-details"
+            >Szczegóły API</a
+          >
+          <a class="dropdown-item" href="#about" id="load-about">O projekcie</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Przyciski przewijania -->
+    <div class="scroll-buttons">
+      <button id="scroll-top">↑</button>
+      <button id="scroll-bottom">↓</button>
+    </div>
+
+    <!-- Główna treść -->
+    <div class="container mt-5 pt-5">
+      <div id="home" class="text-center my-5">
+        <h1>Witamy w Galerii Psów</h1>
+        <p>Przeglądaj zdjęcia psów korzystając z Dog API!</p>
+        <div id="content"></div>
+      </div>
+
+      <div id="gallery" class="text-center my-5">
+        <h2>Galeria Psów</h2>
+        <button id="fetch-dogs" class="btn btn-success mb-3">
+          Pobierz losowe psy
+        </button>
+        <div id="dog-images" class="row"></div>
+      </div>
+
+      <div id="api" class="text-center my-5">
+        <h2>Szczegóły API</h2>
+        <p>
+          Aplikacja pobiera dane z
+          <a href="https://dog.ceo/dog-api/" target="_blank">Dog API</a>.
+        </p>
+      </div>
+
+      <div id="about" class="text-center my-5">
+        <h2>O tym projekcie</h2>
+        <p>
+          Jest to aplikacja demo, która prezentuje integrację z API oraz
+          atrakcyjne funkcje interfejsu użytkownika.
+        </p>
+      </div>
+
+      <footer class="text-center mt-5">
+        <span id="toggle-theme" class="btn btn-secondary"
+          >Przełącz tryb nocny/dzienny</span
+        >
+      </footer>
+    </div>
+
+    <!-- Plik JavaScript -->
+    <script src="scripts.js"></script>
+  </body>
+</html>
